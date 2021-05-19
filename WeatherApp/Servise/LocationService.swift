@@ -11,7 +11,7 @@ protocol LocationServiceDelegate: class {
 final class LocationService: NSObject {
     
     // MARK: - Properties
-    
+
     private let locationManager = CLLocationManager()
     private weak var delegate: LocationServiceDelegate?
     
@@ -35,9 +35,7 @@ final class LocationService: NSObject {
     func requestAuthorization() {
         locationManager.requestWhenInUseAuthorization()
     }
-    
 
-    
     func startUpdating() {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedAlways, .authorizedWhenInUse:
@@ -52,8 +50,6 @@ final class LocationService: NSObject {
         locationManager.delegate = nil
         locationManager.stopUpdatingLocation()
     }
-    
-
 }
 
 // MARK: - CLLocationManagerDelegate

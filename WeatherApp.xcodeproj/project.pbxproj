@@ -16,7 +16,6 @@
 		86A33EF5263466430072159F /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A33EF4263466430072159F /* WeatherResponse.swift */; };
 		86E1ADD7263EF81800784536 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1ADD6263EF81800784536 /* LocationService.swift */; };
 		86F20BC726483E4800EF0691 /* Rain.json in Resources */ = {isa = PBXBuildFile; fileRef = 86F20BC626483E4800EF0691 /* Rain.json */; };
-		86F20BCA2648543400EF0691 /* Sun.json in Resources */ = {isa = PBXBuildFile; fileRef = 86F20BC92648543400EF0691 /* Sun.json */; };
 		86F20BCF2648578500EF0691 /* Background.json in Resources */ = {isa = PBXBuildFile; fileRef = 86F20BCE2648578500EF0691 /* Background.json */; };
 		86F20BD82648624F00EF0691 /* Bg.json in Resources */ = {isa = PBXBuildFile; fileRef = 86F20BD72648624F00EF0691 /* Bg.json */; };
 		86F20BDB26486B7800EF0691 /* Bg1.json in Resources */ = {isa = PBXBuildFile; fileRef = 86F20BDA26486B7800EF0691 /* Bg1.json */; };
@@ -46,7 +45,6 @@
 		86A33EF4263466430072159F /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
 		86E1ADD6263EF81800784536 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		86F20BC626483E4800EF0691 /* Rain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Rain.json; path = ../../../../../Downloads/Rain.json; sourceTree = "<group>"; };
-		86F20BC92648543400EF0691 /* Sun.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Sun.json; path = ../../../../Sun.json; sourceTree = "<group>"; };
 		86F20BCE2648578500EF0691 /* Background.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Background.json; path = ../../../../../Downloads/Background.json; sourceTree = "<group>"; };
 		86F20BD72648624F00EF0691 /* Bg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Bg.json; path = ../../../../../Downloads/Bg.json; sourceTree = "<group>"; };
 		86F20BDA26486B7800EF0691 /* Bg1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Bg1.json; path = ../../../../../Downloads/Bg1.json; sourceTree = "<group>"; };
@@ -141,7 +139,6 @@
 				86F20BD72648624F00EF0691 /* Bg.json */,
 				86741C3126487C0500734F9F /* Bg2.json */,
 				86F20BDA26486B7800EF0691 /* Bg1.json */,
-				86F20BC92648543400EF0691 /* Sun.json */,
 				86F20BCE2648578500EF0691 /* Background.json */,
 			);
 			path = Assects;
@@ -304,7 +301,6 @@
 				86FE5EAD262B582D00E9C374 /* Main.storyboard in Resources */,
 				86F20BC726483E4800EF0691 /* Rain.json in Resources */,
 				86F20BD82648624F00EF0691 /* Bg.json in Resources */,
-				86F20BCA2648543400EF0691 /* Sun.json in Resources */,
 				86F20BCF2648578500EF0691 /* Background.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

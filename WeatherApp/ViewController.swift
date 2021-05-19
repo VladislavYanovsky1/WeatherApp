@@ -1,8 +1,6 @@
 
 import UIKit
 import Foundation
-import RxSwift
-import RxCocoa
 import CoreLocation
 import Lottie
 import SCLAlertView
@@ -10,7 +8,6 @@ import SCLAlertView
 class ViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource{
     
     // MARK: - IBOutlets
-    
     @IBOutlet weak var cityNameLabel: UILabel!
     @IBOutlet var weatherTableView: UITableView!
     @IBOutlet weak var weatherCollectionView: UICollectionView!
@@ -19,13 +16,8 @@ class ViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate
     @IBOutlet weak var animationView: AnimationView?
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    
-
     // MARK: - Decalare ViewModel
     let weatherViewModel = WeatherViewModel()
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +32,6 @@ class ViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate
         animationView?.frame = view.bounds
         animationView?.animationSpeed = 0.5
         animationView?.play()
-
        
         weatherTableView.delegate = self
         weatherTableView.dataSource = self
@@ -54,17 +45,14 @@ class ViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate
         
         bindViewModel()
         weatherViewModel.requestWeatherWithCoordinate()
-        
 }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super .viewWillAppear(animated)
         animationView?.reloadImages()
     }
-
     
     //MARK: Functions
-    
     private func bindViewModel() {
         
         self.weatherViewModel.city.bind { (result) in
@@ -81,7 +69,6 @@ class ViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate
         self.weatherViewModel.collectionViewModel.bind { (result) in
             self.weatherCollectionView.reloadData()
         }
-        
 }
 
     func showAlert(withTitle title: String?, message: String?, andAction actions: [UIAlertAction] = [UIAlertAction(title: "OK", style: .default, handler: nil)]) {
@@ -89,7 +76,6 @@ class ViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate
         actions.forEach({alert.addAction($0)})
         present(alert, animated: true, completion: nil)
     }
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return weatherViewModel.tableViewModel.value.count
@@ -102,7 +88,6 @@ class ViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate
         return  cell
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return weatherViewModel.collectionViewModel.value.count
     }
@@ -113,7 +98,6 @@ class ViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate
         return cell
     }
 
-    
 }
 
 
@@ -121,7 +105,6 @@ extension ViewController: WeatherViewModelDelegate {
     func showInternetError() {
         SCLAlertView().showWarning("No Internet connection", subTitle: "Please check your internet connection and restart the app")
     }
-    
     
     func set(isLoadind: Bool) {
         if isLoadind {
@@ -144,7 +127,5 @@ extension ViewController: WeatherViewModelDelegate {
         }
         showAlert(withTitle: "Error", message: "Location acces denied. Please allow it from Settings.", andAction: [settingAction, cancelAction])
     }
-    
-    
 }
 

@@ -8,20 +8,15 @@ class WeatherTableViewCell: UITableViewCell {
     @IBOutlet var nightTempLabel: UILabel!
     @IBOutlet var iconImageView: UIImageView!
     
-    
-
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = .clear
     }
 
-    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
     }
-    
- 
     
     static let identifier = "WeatherTableViewCell"
 

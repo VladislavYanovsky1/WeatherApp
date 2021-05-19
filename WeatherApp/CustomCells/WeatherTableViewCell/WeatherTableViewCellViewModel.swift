@@ -16,7 +16,6 @@ class  WeatherTableViewCellViewModel {
         iconName =  model.weather[0].icon ?? "Need new icons"
     }
 }
-    
 
     func getDayForDate(_date: Date?) -> String {
         guard let inputDate = _date else {

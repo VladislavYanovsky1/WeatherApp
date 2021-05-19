@@ -16,10 +16,10 @@ extension String  {
         "13":  UIImage(named: "snow"),
         "50":  UIImage(named: "mist")
         ]
-    
+
     func image() -> UIImage? {
         let icon =  String.iconIdToUIImage.filter {self.contains($0.key)}.first?.value
-//        return String.iconIdToUIImage[self] ?? UIImage(named: "error") // для катинок дня/ночи
+//        return String.iconIdToUIImage[self] ?? UIImage(named: "error") // для картинок дня/ночи
         return icon != nil ? icon : UIImage(named: "error")
     }
 }

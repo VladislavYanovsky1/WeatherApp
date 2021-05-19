@@ -24,7 +24,6 @@ public class APIService {
                 }
                 return
             }
-    
             guard let data = data else {
                 DispatchQueue.main.async{
                 completion(.failure(.error(NSLocalizedString("Error: Data is corrupt.", comment: ""))))
